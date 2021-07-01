@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#skipnav {
+    position: fixed;
+    top: 30px;
+    border: 1px solid #ababab;
+    z-index: -5;
+    padding: 7.5px;
+    background-color: #fff;
+    opacity: 0;
+}
+
+#skipnav:focus {
+    opacity: 100;
+    z-index: 10;
+}
+
+.main-menu .top-links > a {
+    @apply text-base uppercase font-bold text-link hover:border-b-4 hover:border-headline;
+}
+
+.main-menu .top-links > a:focus + div {
+    @apply block !important;
+}
+
+.main-menu .dropdown a {
+    @apply block text-sm font-medium text-body-text text-left px-2 py-2 hover:bg-hover;
+}
+
+.mobile-menu a {
+    @apply -m-3 flex items-center p-3 rounded-lg hover:bg-gray-50 ml-4 text-base uppercase font-medium text-link;
+}
+
+.metadata a {
+    @apply text-sub-headline underline;
+}
+
+.item-pagination a {
+    @apply bg-sub-headline text-uic-white text-lg py-2 px-4;
+}
+
+/* Search results */
+
+.items-nav.navigation.secondary-nav > ul {
+    @apply flex space-x-4;
+}
+
+.items-nav.navigation.secondary-nav a{
+    @apply font-semibold text-sub-headline hover:underline;
+}
+
+#item-filters ul, #search-filters > ul {
+    @apply flex space-x-2;
+}
+
+#item-filters ul li, #search-filters > ul li {
+    @apply bg-gray-200 px-1 flex-none;
+}
+
+#search-filters > ul > li > ul  {
+    @apply inline-flex
+}
+
+#sort-links, #sort-links-list {
+    @apply flex space-x-4
+}
+
+.sorting.asc a:before {
+    background-image: url(data:image/svg+xml,%3Csvg%20class%3D%22h-4%20w-4%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M3%204h13M3%208h9m-9%204h6m4%200l4-4m0%200l4%204m-4-4v12%22%20%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    vertical-align: sub;
+    width: 1rem;
+}
+
+.sorting.desc a:before {
+    background-image: url(data:image/svg+xml,%3Csvg%20class%3D%22h-4%20w-4%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%222%22%20d%3D%22M3%204h13M3%208h9m-9%204h9m5-4v12m0%200l-4-4m4%204l4-4%22%20%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    vertical-align: sub;
+    width: 1rem;
+}
+
+#collections-sidebar a {
+    @apply block py-1;
+}
+
+#collections-sidebar a:hover {
+    @apply py-1 hover:bg-hover;
+}
+
+#collections-sidebar a.active {
+    @apply text-headline font-semibold;
+}
