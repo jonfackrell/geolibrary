@@ -47,13 +47,7 @@ Because `npx mix --production` will purge any utility classes not found in the p
 2. Because Simple Pages are the most likely place where classes will be stored in the database, I have just placed html pages in the simple-pages directory. This file contains the content of the Contribute page within Omeka.
 
 ## Homepage Link Boxes
-The link boxes on the homepage are links to Featured Collections. The theme currently limits the display to 3, but that number could potentially be updated to show more.
-
-The images are located in the theme directory under geolibrary/images/ and must be named after this pattern:
-
-``` 
-{collection-name}-link-box.jpg 
-```
+The link boxes on the homepage are hard coded links to Collection pages. The links on these boxes can be updated in the file /geolibrary/common/link-box.php
 
 ## Navigation
 
